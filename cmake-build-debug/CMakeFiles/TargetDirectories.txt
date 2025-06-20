@@ -1,0 +1,5 @@
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/CMakeFiles/renderer.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament/CMakeFiles/edit_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament/CMakeFiles/rebuild_cache.dir
