@@ -1,13 +1,9 @@
 /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
-  Compatibility with CMake < 3.10 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
-  to tell CMake that the project requires at least <min> but has been updated
-  to work with policies introduced by <max> or earlier.
-
-
+-- Build spdlog: 1.15.3
+-- Build type: Debug
+-- Including Cocoa support
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Documentation generation requires Doxygen 1.9.8 or later
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug

@@ -38,9 +38,43 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament/cmake_install.cmake")
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog/cmake_install.cmake")
+endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

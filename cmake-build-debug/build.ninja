@@ -47,12 +47,21 @@ cmake_ninja_workdir = /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cma
 #############################################
 # Order-only phony target for renderer
 
-build cmake_object_order_depends_target_renderer: phony || .
+build cmake_object_order_depends_target_renderer: phony || cmake_object_order_depends_target_ImGui cmake_object_order_depends_target_ImGuizmo cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_imnodes cmake_object_order_depends_target_spdlog
+
+build CMakeFiles/renderer.dir/cocoa_helper.mm.o: CXX_COMPILER__renderer_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cocoa_helper.mm || cmake_object_order_depends_target_renderer
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = CMakeFiles/renderer.dir/cocoa_helper.mm.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glm -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -isystem /opt/homebrew/Cellar/sdl2/2.32.8/include/SDL2
+  OBJECT_DIR = CMakeFiles/renderer.dir
+  OBJECT_FILE_DIR = CMakeFiles/renderer.dir
 
 build CMakeFiles/renderer.dir/main.cpp.o: CXX_COMPILER__renderer_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/main.cpp || cmake_object_order_depends_target_renderer
+  DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/renderer.dir/main.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/include
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glm -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -isystem /opt/homebrew/Cellar/sdl2/2.32.8/include/SDL2
   OBJECT_DIR = CMakeFiles/renderer.dir
   OBJECT_FILE_DIR = CMakeFiles/renderer.dir
 
@@ -64,11 +73,12 @@ build CMakeFiles/renderer.dir/main.cpp.o: CXX_COMPILER__renderer_unscanned_Debug
 #############################################
 # Link the executable renderer
 
-build renderer: CXX_EXECUTABLE_LINKER__renderer_Debug CMakeFiles/renderer.dir/main.cpp.o | /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libabseil.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbackend.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbasis_transcoder.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluegl.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluevk.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcamutils.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcivetweb.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libdracodec.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilabridge.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilaflat.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilamat.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament-iblprefilter.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilameshio.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgeometry.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio_core.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl-lite.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libimage.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libktxreader.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmatdbg.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmeshoptimizer.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmikktspace.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libperfetto.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libshaders.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libsmol-v.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libstb.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberarchive.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberzlib.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libutils.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libviewer.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libvkshaders.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libzstd.a
+build renderer: CXX_EXECUTABLE_LINKER__renderer_Debug CMakeFiles/renderer.dir/cocoa_helper.mm.o CMakeFiles/renderer.dir/main.cpp.o | ThirdParty/spdlog/libspdlogd.a ThirdParty/imgui/libImGui.a ThirdParty/ImGuizmo/libImGuizmo.a ThirdParty/imnodes/libimnodes.a ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a /opt/homebrew/Cellar/sdl2/2.32.8/lib/libSDL2.dylib /opt/homebrew/Cellar/sdl2/2.32.8/lib/libSDL2main.a ThirdParty/imgui/libImGui.a ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libabseil.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbackend.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbasis_transcoder.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluegl.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluevk.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcamutils.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcivetweb.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libdracodec.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilabridge.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilaflat.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilamat.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament-iblprefilter.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilameshio.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgeometry.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio_core.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl-lite.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libimage.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libktxreader.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmatdbg.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmeshoptimizer.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmikktspace.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libperfetto.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libshaders.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libsmol-v.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libstb.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberarchive.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberzlib.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libutils.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libviewer.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libvkshaders.a /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libzstd.a || ThirdParty/ImGuizmo/libImGuizmo.a ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a ThirdParty/imgui/libImGui.a ThirdParty/imnodes/libimnodes.a ThirdParty/spdlog/libspdlogd.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
-  LINK_LIBRARIES = -framework Cocoa  -framework CoreFoundation  -framework CoreVideo  -framework CoreMedia  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework IOSurface  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libabseil.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbackend.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbasis_transcoder.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluegl.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluevk.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcamutils.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcivetweb.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libdracodec.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilabridge.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilaflat.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilamat.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament-iblprefilter.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilameshio.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgeometry.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio_core.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl-lite.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libimage.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libktxreader.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmatdbg.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmeshoptimizer.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmikktspace.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libperfetto.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libshaders.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libsmol-v.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libstb.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberarchive.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberzlib.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libutils.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libviewer.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libvkshaders.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libzstd.a
+  LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/Cellar/sdl2/2.32.8/lib  ThirdParty/spdlog/libspdlogd.a  ThirdParty/imgui/libImGui.a  ThirdParty/ImGuizmo/libImGuizmo.a  ThirdParty/imnodes/libimnodes.a  ThirdParty/glad/libglad.a  ThirdParty/glfw/src/libglfw3.a  /opt/homebrew/Cellar/sdl2/2.32.8/lib/libSDL2.dylib  /opt/homebrew/Cellar/sdl2/2.32.8/lib/libSDL2main.a  -framework Cocoa  -framework QuartzCore  -framework Metal  ThirdParty/imgui/libImGui.a  ThirdParty/glad/libglad.a  ThirdParty/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libabseil.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbackend.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbasis_transcoder.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluegl.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libbluevk.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcamutils.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libcivetweb.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libdracodec.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilabridge.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilaflat.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilamat.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament-iblprefilter.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilament.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libfilameshio.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgeometry.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libgltfio_core.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl-lite.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libibl.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libimage.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libktxreader.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmatdbg.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmeshoptimizer.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libmikktspace.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libperfetto.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libshaders.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libsmol-v.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libstb.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberarchive.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libuberzlib.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libutils.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libviewer.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libvkshaders.a  /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/macos/arm64/libzstd.a
+  LINK_PATH = -L/opt/homebrew/Cellar/sdl2/2.32.8/lib
   OBJECT_DIR = CMakeFiles/renderer.dir
-  POST_BUILD = :
+  POST_BUILD = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E copy_directory /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/Assets /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/Assets
   PRE_LINK = :
   TARGET_FILE = renderer
   TARGET_PDB = renderer.dbg
@@ -95,6 +105,1148 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Order-only phony target for spdlog
+
+build cmake_object_order_depends_target_spdlog: phony || .
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/spdlog.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/color_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/file_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/async.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/cfg.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+build ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/src/bundled_fmtlib_format.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/include
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Link the static library ThirdParty/spdlog/libspdlogd.a
+
+build ThirdParty/spdlog/libspdlogd.a: CXX_STATIC_LIBRARY_LINKER__spdlog_Debug ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o ThirdParty/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/spdlog/CMakeFiles/spdlog.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/spdlog/libspdlogd.a
+  TARGET_PDB = spdlogd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/spdlog/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/spdlog/edit_cache: phony ThirdParty/spdlog/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/spdlog/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/spdlog/rebuild_cache: phony ThirdParty/spdlog/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/spdlog/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/spdlog/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/spdlog/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/spdlog/install: phony ThirdParty/spdlog/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/spdlog/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/spdlog/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/spdlog/install/local: phony ThirdParty/spdlog/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/spdlog/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/spdlog/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/spdlog/install/strip: phony ThirdParty/spdlog/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target ImGui
+
+
+#############################################
+# Order-only phony target for ImGui
+
+build cmake_object_order_depends_target_ImGui: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/imgui.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_draw.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/imgui_draw.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_draw.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_widgets.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_widgets.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_demo.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/imgui_demo.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_demo.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_opengl3.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/examples/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_opengl3.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir/examples
+
+build ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_glfw.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/examples/imgui_impl_glfw.cpp || cmake_object_order_depends_target_ImGui
+  DEP_FILE = ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_glfw.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  OBJECT_FILE_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir/examples
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target ImGui
+
+
+#############################################
+# Link the static library ThirdParty/imgui/libImGui.a
+
+build ThirdParty/imgui/libImGui.a: CXX_STATIC_LIBRARY_LINKER__ImGui_Debug ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui.cpp.o ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_draw.cpp.o ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_widgets.cpp.o ThirdParty/imgui/CMakeFiles/ImGui.dir/imgui_demo.cpp.o ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_opengl3.cpp.o ThirdParty/imgui/CMakeFiles/ImGui.dir/examples/imgui_impl_glfw.cpp.o || ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/imgui/CMakeFiles/ImGui.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/imgui/libImGui.a
+  TARGET_PDB = ImGui.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/imgui/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/imgui/edit_cache: phony ThirdParty/imgui/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/imgui/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/imgui/rebuild_cache: phony ThirdParty/imgui/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/imgui/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/imgui/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/imgui/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/imgui/install: phony ThirdParty/imgui/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/imgui/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/imgui/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/imgui/install/local: phony ThirdParty/imgui/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/imgui/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/imgui/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/imgui/install/strip: phony ThirdParty/imgui/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target ImGuizmo
+
+
+#############################################
+# Order-only phony target for ImGuizmo
+
+build cmake_object_order_depends_target_ImGuizmo: phony || cmake_object_order_depends_target_ImGui cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir/ImGuizmo.cpp.o: CXX_COMPILER__ImGuizmo_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/ImGuizmo/ImGuizmo.cpp || cmake_object_order_depends_target_ImGuizmo
+  DEP_FILE = ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir/ImGuizmo.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir
+  OBJECT_FILE_DIR = ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target ImGuizmo
+
+
+#############################################
+# Link the static library ThirdParty/ImGuizmo/libImGuizmo.a
+
+build ThirdParty/ImGuizmo/libImGuizmo.a: CXX_STATIC_LIBRARY_LINKER__ImGuizmo_Debug ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir/ImGuizmo.cpp.o || ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a ThirdParty/imgui/libImGui.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/ImGuizmo/CMakeFiles/ImGuizmo.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/ImGuizmo/libImGuizmo.a
+  TARGET_PDB = ImGuizmo.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/ImGuizmo/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/ImGuizmo/edit_cache: phony ThirdParty/ImGuizmo/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/ImGuizmo/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/ImGuizmo/rebuild_cache: phony ThirdParty/ImGuizmo/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/ImGuizmo/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/ImGuizmo/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/ImGuizmo/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/ImGuizmo/install: phony ThirdParty/ImGuizmo/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/ImGuizmo/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/ImGuizmo/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/ImGuizmo/install/local: phony ThirdParty/ImGuizmo/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/ImGuizmo/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/ImGuizmo/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/ImGuizmo/install/strip: phony ThirdParty/ImGuizmo/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target imnodes
+
+
+#############################################
+# Order-only phony target for imnodes
+
+build cmake_object_order_depends_target_imnodes: phony || cmake_object_order_depends_target_ImGui cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build ThirdParty/imnodes/CMakeFiles/imnodes.dir/imnodes.cpp.o: CXX_COMPILER__imnodes_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes/imnodes.cpp || cmake_object_order_depends_target_imnodes
+  DEP_FILE = ThirdParty/imnodes/CMakeFiles/imnodes.dir/imnodes.cpp.o.d
+  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics -Wall -Wextra -Wpedantic -Werror
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include
+  OBJECT_DIR = ThirdParty/imnodes/CMakeFiles/imnodes.dir
+  OBJECT_FILE_DIR = ThirdParty/imnodes/CMakeFiles/imnodes.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target imnodes
+
+
+#############################################
+# Link the static library ThirdParty/imnodes/libimnodes.a
+
+build ThirdParty/imnodes/libimnodes.a: CXX_STATIC_LIBRARY_LINKER__imnodes_Debug ThirdParty/imnodes/CMakeFiles/imnodes.dir/imnodes.cpp.o || ThirdParty/glad/libglad.a ThirdParty/glfw/src/libglfw3.a ThirdParty/imgui/libImGui.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/imnodes/CMakeFiles/imnodes.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/imnodes/libimnodes.a
+  TARGET_PDB = imnodes.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/imnodes/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/imnodes/edit_cache: phony ThirdParty/imnodes/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/imnodes/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/imnodes/rebuild_cache: phony ThirdParty/imnodes/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/imnodes/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/imnodes/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/imnodes/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/imnodes/install: phony ThirdParty/imnodes/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/imnodes/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/imnodes/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/imnodes/install/local: phony ThirdParty/imnodes/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/imnodes/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/imnodes/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/imnodes/install/strip: phony ThirdParty/imnodes/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build ThirdParty/glfw/uninstall: phony ThirdParty/glfw/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/glfw/edit_cache: phony ThirdParty/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/rebuild_cache: phony ThirdParty/glfw/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/glfw/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/glfw/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/glfw/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/install: phony ThirdParty/glfw/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/glfw/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/install/local: phony ThirdParty/glfw/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/glfw/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/install/strip: phony ThirdParty/glfw/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for ThirdParty/glfw/CMakeFiles/uninstall
+
+build ThirdParty/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}ThirdParty/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || .
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/platform.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_init.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_window.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+build ThirdParty/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = ThirdParty/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/include -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library ThirdParty/glfw/src/libglfw3.a
+
+build ThirdParty/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug ThirdParty/glfw/src/CMakeFiles/glfw.dir/context.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/init.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/input.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/monitor.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/platform.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/window.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_init.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_window.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o ThirdParty/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/glfw/src/libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build ThirdParty/glfw/src/update_mappings: phony ThirdParty/glfw/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/glfw/src/edit_cache: phony ThirdParty/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/src/rebuild_cache: phony ThirdParty/glfw/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/glfw/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/glfw/src/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/src/install: phony ThirdParty/glfw/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/glfw/src/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/src/install/local: phony ThirdParty/glfw/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/glfw/src/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/src/install/strip: phony ThirdParty/glfw/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for ThirdParty/glfw/src/CMakeFiles/update_mappings
+
+build ThirdParty/glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}ThirdParty/glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+  DESC = Updating gamepad mappings from upstream repository
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/glfw/docs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/glfw/docs/edit_cache: phony ThirdParty/glfw/docs/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/glfw/docs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/docs/rebuild_cache: phony ThirdParty/glfw/docs/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/glfw/docs/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/glfw/docs/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/glfw/docs/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/docs/install: phony ThirdParty/glfw/docs/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/glfw/docs/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/glfw/docs/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/docs/install/local: phony ThirdParty/glfw/docs/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/glfw/docs/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/glfw/docs/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/glfw/docs/install/strip: phony ThirdParty/glfw/docs/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || .
+
+build ThirdParty/glad/CMakeFiles/glad.dir/src/glad.c.o: C_COMPILER__glad_unscanned_Debug /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/src/glad.c || cmake_object_order_depends_target_glad
+  DEP_FILE = ThirdParty/glad/CMakeFiles/glad.dir/src/glad.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/include
+  OBJECT_DIR = ThirdParty/glad/CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = ThirdParty/glad/CMakeFiles/glad.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library ThirdParty/glad/libglad.a
+
+build ThirdParty/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug ThirdParty/glad/CMakeFiles/glad.dir/src/glad.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = ThirdParty/glad/CMakeFiles/glad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ThirdParty/glad/libglad.a
+  TARGET_PDB = glad.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/glad/edit_cache: phony ThirdParty/glad/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/glad/rebuild_cache: phony ThirdParty/glad/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/glad/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/glad/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/glad/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/glad/install: phony ThirdParty/glad/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/glad/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/glad/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/glad/install/local: phony ThirdParty/glad/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/glad/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/glad/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/glad/install/strip: phony ThirdParty/glad/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build ThirdParty/glm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build ThirdParty/glm/edit_cache: phony ThirdParty/glm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build ThirdParty/glm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build ThirdParty/glm/rebuild_cache: phony ThirdParty/glm/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/glm/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/glm/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/glm/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/glm/install: phony ThirdParty/glm/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/glm/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/glm/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/glm/install/local: phony ThirdParty/glm/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/glm/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/glm/install/strip: phony ThirdParty/glm/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -124,8 +1276,78 @@ build ThirdParty/filament/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build ThirdParty/filament/rebuild_cache: phony ThirdParty/filament/CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build ThirdParty/filament/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build ThirdParty/filament/CMakeFiles/install.util: CUSTOM_COMMAND ThirdParty/filament/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build ThirdParty/filament/install: phony ThirdParty/filament/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build ThirdParty/filament/CMakeFiles/install/local.util: CUSTOM_COMMAND ThirdParty/filament/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build ThirdParty/filament/install/local: phony ThirdParty/filament/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build ThirdParty/filament/CMakeFiles/install/strip.util: CUSTOM_COMMAND ThirdParty/filament/all
+  COMMAND = cd /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/filament && /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build ThirdParty/filament/install/strip: phony ThirdParty/filament/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
+
+build ImGui: phony ThirdParty/imgui/libImGui.a
+
+build ImGuizmo: phony ThirdParty/ImGuizmo/libImGuizmo.a
+
+build glad: phony ThirdParty/glad/libglad.a
+
+build glfw: phony ThirdParty/glfw/src/libglfw3.a
+
+build imnodes: phony ThirdParty/imnodes/libimnodes.a
+
+build libImGui.a: phony ThirdParty/imgui/libImGui.a
+
+build libImGuizmo.a: phony ThirdParty/ImGuizmo/libImGuizmo.a
+
+build libglad.a: phony ThirdParty/glad/libglad.a
+
+build libglfw3.a: phony ThirdParty/glfw/src/libglfw3.a
+
+build libimnodes.a: phony ThirdParty/imnodes/libimnodes.a
+
+build libspdlogd.a: phony ThirdParty/spdlog/libspdlogd.a
+
+build spdlog: phony ThirdParty/spdlog/libspdlogd.a
+
+build uninstall: phony ThirdParty/glfw/uninstall
+
+build update_mappings: phony ThirdParty/glfw/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -135,7 +1357,14 @@ build ThirdParty/filament/rebuild_cache: phony ThirdParty/filament/CMakeFiles/re
 #############################################
 # Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
 
-build all: phony renderer ThirdParty/filament/all
+build all: phony renderer ThirdParty/spdlog/all ThirdParty/imgui/all ThirdParty/ImGuizmo/all ThirdParty/imnodes/all ThirdParty/glfw/all ThirdParty/glad/all ThirdParty/glm/all ThirdParty/filament/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/ImGuizmo
+
+build ThirdParty/ImGuizmo/all: phony ThirdParty/ImGuizmo/libImGuizmo.a
 
 # =============================================================================
 
@@ -145,9 +1374,60 @@ build all: phony renderer ThirdParty/filament/all
 build ThirdParty/filament/all: phony
 
 # =============================================================================
-# Unknown Build Time Dependencies.
-# Tell Ninja that they may appear as side effects of build rules
-# otherwise ordered by order-only dependencies.
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glad
+
+build ThirdParty/glad/all: phony ThirdParty/glad/libglad.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw
+
+build ThirdParty/glfw/all: phony ThirdParty/glfw/src/all ThirdParty/glfw/docs/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/docs
+
+build ThirdParty/glfw/docs/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glfw/src
+
+build ThirdParty/glfw/src/all: phony ThirdParty/glfw/src/libglfw3.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/glm
+
+build ThirdParty/glm/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imgui
+
+build ThirdParty/imgui/all: phony ThirdParty/imgui/libImGui.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/imnodes
+
+build ThirdParty/imnodes/all: phony ThirdParty/imnodes/libimnodes.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug/ThirdParty/spdlog
+
+build ThirdParty/spdlog/all: phony ThirdParty/spdlog/libspdlogd.a
 
 # =============================================================================
 # Built-in targets
@@ -156,14 +1436,14 @@ build ThirdParty/filament/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.4/CMakeCXXCompiler.cmake CMakeFiles/3.31.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckSymbolExists.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FeatureSummary.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindDoxygen.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindPackageMessage.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindThreads.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/ImGuizmo/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/cmake_uninstall.cmake.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/glfw3.pc.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/glfw3Config.cmake.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/docs/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glm/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/cmake/ide.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/cmake/utils.cmake /opt/homebrew/lib/cmake/SDL2/sdl2-config-version.cmake /opt/homebrew/lib/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.31.4/CMakeCCompiler.cmake CMakeFiles/3.31.4/CMakeCXXCompiler.cmake CMakeFiles/3.31.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.4/CMakeCXXCompiler.cmake CMakeFiles/3.31.4/CMakeSystem.cmake: phony
+build /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckSymbolExists.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FeatureSummary.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindDoxygen.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindPackageMessage.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindThreads.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/ImGuizmo/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/filament/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glad/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/cmake_uninstall.cmake.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/glfw3.pc.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMake/glfw3Config.cmake.in /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/docs/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glfw/src/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/glm/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imgui/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/imnodes/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/CMakeLists.txt /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/cmake/ide.cmake /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/ThirdParty/spdlog/cmake/utils.cmake /opt/homebrew/lib/cmake/SDL2/sdl2-config-version.cmake /opt/homebrew/lib/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.31.4/CMakeCCompiler.cmake CMakeFiles/3.31.4/CMakeCXXCompiler.cmake CMakeFiles/3.31.4/CMakeSystem.cmake: phony
 
 
 #############################################
