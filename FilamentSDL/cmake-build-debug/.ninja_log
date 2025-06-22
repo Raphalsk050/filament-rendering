@@ -1,0 +1,9 @@
+# ninja log v6
+1	705	1750555873681318735	materials/lit_color.filamat	40219644c366c27c
+1	705	1750555873681318735	/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/materials/lit_color.filamat	40219644c366c27c
+706	1052	1750555873683792806	CMakeFiles/filament_sdl.dir/renderer.cpp.o	f5c9d0af395e8d33
+706	1091	1750555873683481631	CMakeFiles/filament_sdl.dir/window.cpp.o	55a8eb8c8bf6932f
+706	1133	1750555873683897101	CMakeFiles/filament_sdl.dir/camera_controller.cpp.o	b1abd09124554fff
+706	1136	1750555873683640635	CMakeFiles/filament_sdl.dir/input.cpp.o	89e53da4b0caff93
+706	1163	1750555873683262875	CMakeFiles/filament_sdl.dir/main.cpp.o	ac0099666a31b819
+706	1167	1750555873684000271	CMakeFiles/filament_sdl.dir/native_window_helper_cocoa.mm.o	868b0caacb963cb4

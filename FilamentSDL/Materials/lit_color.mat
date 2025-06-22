@@ -1,0 +1,17 @@
+material {
+  name : "LitColor",
+  parameters : [
+    {
+      type : float4,
+      name : baseColor
+    }
+  ],
+  shadingModel : lit,
+}
+
+fragment {
+  void material(inout MaterialInputs material) {
+    prepareMaterial(material);
+    material.baseColor = materialParams.baseColor;
+  }
+}

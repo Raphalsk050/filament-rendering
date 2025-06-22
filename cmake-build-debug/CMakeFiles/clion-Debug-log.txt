@@ -1,9 +1,0 @@
-/Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/rafaelaragaomorais/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/rafaelaragaomorais/_PROJECTS/filament-rendering -B /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug
--- Build spdlog: 1.15.3
--- Build type: Debug
--- Including Cocoa support
--- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
--- Documentation generation requires Doxygen 1.9.8 or later
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/rafaelaragaomorais/_PROJECTS/filament-rendering/cmake-build-debug

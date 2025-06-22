@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "filament-build",
+		"source" : "/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/third_party/filament"
+	}
+}

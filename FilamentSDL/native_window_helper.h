@@ -1,0 +1,8 @@
+#ifndef FILAMENT_SDL_NATIVE_WINDOW_HELPER_H
+#define FILAMENT_SDL_NATIVE_WINDOW_HELPER_H
+
+#include <SDL.h>
+
+void* GetNativeWindow(SDL_Window* window);
+
+#endif // FILAMENT_SDL_NATIVE_WINDOW_HELPER_H

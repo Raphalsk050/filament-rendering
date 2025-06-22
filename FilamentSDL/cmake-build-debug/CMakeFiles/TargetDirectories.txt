@@ -1,0 +1,6 @@
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/CMakeFiles/filament_sdl.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/CMakeFiles/materials.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/filament-build/CMakeFiles/edit_cache.dir
+/Users/rafaelaragaomorais/_PROJECTS/filament-rendering/FilamentSDL/cmake-build-debug/filament-build/CMakeFiles/rebuild_cache.dir
