@@ -2,9 +2,19 @@ cmake_minimum_required(VERSION 3.13)
 project(filament LANGUAGES CXX)
 
 # 1) coleta todos os .a numa lista
-file(GLOB_RECURSE FILAMENT_LIBS
-        "${CMAKE_CURRENT_SOURCE_DIR}/macos/arm64/*.a"
-)
+if(APPLE)
+    file(GLOB_RECURSE FILAMENT_LIBS
+            "${CMAKE_CURRENT_SOURCE_DIR}/macos/arm64/*.a"
+    )
+elseif(UNIX)
+    file(GLOB_RECURSE FILAMENT_LIBS
+            "${CMAKE_CURRENT_SOURCE_DIR}/linux/x86_64/*.a"
+    )
+elseif(WIN32)
+    message(FATAL_ERROR "Precompiled Filament libraries for Windows are not shipped with this repository")
+else()
+    message(FATAL_ERROR "Unsupported platform for Filament binaries")
+endif()
 
 # 2) cria um target de INTERFACE (não precisa ter um .a único)
 add_library(filament INTERFACE)

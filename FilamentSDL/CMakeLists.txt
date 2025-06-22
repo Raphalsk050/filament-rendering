@@ -14,8 +14,13 @@ set(SRC
         input.cpp
         renderer.cpp
         camera_controller.cpp
-        native_window_helper_cocoa.mm
 )
+
+if(APPLE)
+    list(APPEND SRC native_window_helper_cocoa.mm)
+else()
+    list(APPEND SRC native_window_helper.cpp)
+endif()
 
 add_executable(filament_sdl ${SRC})
 
@@ -29,15 +34,21 @@ target_link_libraries(filament_sdl PRIVATE
         filament
 )
 
-# Material compilation
-set(MATERIAL_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/materials)
-file(MAKE_DIRECTORY ${MATERIAL_OUTPUT_DIR})
-add_custom_command(
-        OUTPUT ${MATERIAL_OUTPUT_DIR}/lit_color.filamat
-        COMMAND ${CMAKE_SOURCE_DIR}/../third_party/filament/bin/matc -o ${MATERIAL_OUTPUT_DIR}/lit_color.filamat
-        ${CMAKE_CURRENT_SOURCE_DIR}/materials/lit_color.mat
-        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/materials/lit_color.mat
-        COMMENT "Compiling Filament material"
-)
-add_custom_target(materials ALL DEPENDS ${MATERIAL_OUTPUT_DIR}/lit_color.filamat)
-add_dependencies(filament_sdl materials)
+if(TARGET SDL2::SDL2main)
+    target_link_libraries(filament_sdl PRIVATE SDL2::SDL2main)
+endif()
+
+# Material compilation (only available on macOS where prebuilt tools are provided)
+if(APPLE)
+    set(MATERIAL_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/materials)
+    file(MAKE_DIRECTORY ${MATERIAL_OUTPUT_DIR})
+    add_custom_command(
+            OUTPUT ${MATERIAL_OUTPUT_DIR}/lit_color.filamat
+            COMMAND ${CMAKE_SOURCE_DIR}/../third_party/filament/bin/matc -o ${MATERIAL_OUTPUT_DIR}/lit_color.filamat
+            ${CMAKE_CURRENT_SOURCE_DIR}/Materials/lit_color.mat
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/Materials/lit_color.mat
+            COMMENT "Compiling Filament material"
+    )
+    add_custom_target(materials ALL DEPENDS ${MATERIAL_OUTPUT_DIR}/lit_color.filamat)
+    add_dependencies(filament_sdl materials)
+endif()
